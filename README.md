@@ -180,6 +180,28 @@ Run it:
 python decorators_context_managers.py
 ```
 
+#### Async Programming Sandbox (`async_examples.py`)
+- Modern async/await walkthrough using `asyncio`
+- Parallel coroutine execution, async HTTP requests with **aiohttp**, producer/consumer queues
+- Timeout handling plus async context manager patterns
+
+Run it:
+```bash
+pip install aiohttp  # if needed
+python async_examples.py
+```
+
+#### Type Hints & Static Typing Deep Dive (`type_hints_examples.py`)
+- Covers annotations, `TypedDict`, `Protocol`, generics, dataclasses, and overloads
+- Demonstrates runtime inspection + mypy linting tips
+- Includes practical workflows for filtering data, calculating stats, and documenting APIs
+
+Run it:
+```bash
+python type_hints_examples.py
+python -m mypy type_hints_examples.py  # optional static check
+```
+
 ## Learning Python
 
 ### Why Python?
@@ -215,6 +237,8 @@ python-learning/
 ├── data_analysis.py      # Pandas-based analytics workflow
 ├── web_scraping.py       # BeautifulSoup scraping tutorial
 ├── automation_scripts.py # CLI for backups/reports/reminders
+├── async_examples.py     # Async/await playground
+├── type_hints_examples.py # Static typing best practices
 ├── data/
 │   └── sales_data.csv    # Sample dataset for analytics
 ├── reports/              # Auto-generated Excel/JSON reports
