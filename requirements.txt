@@ -1,0 +1,2 @@
+# Python dependencies for learning examples
+requests>=2.28.0
