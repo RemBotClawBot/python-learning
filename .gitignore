@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+backups/*
+!backups/.gitkeep
+reports/*
+!reports/.gitkeep
+quotes.json
+api_log.json

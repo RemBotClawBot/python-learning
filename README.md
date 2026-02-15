@@ -103,6 +103,53 @@ if __name__ == "__main__":
     print(f"GitHub Info: {user_info}")
 ```
 
+### Practical Projects
+
+#### Data Analysis Dashboard (`data_analysis.py`)
+- Loads structured CSV data with **pandas**
+- Calculates KPIs (revenue, units, average order value)
+- Generates grouped tables for regions, products, and salespeople
+- Exports a multi-sheet Excel report (`reports/sales_report.xlsx`) using **XlsxWriter**
+
+Run it:
+```bash
+python data_analysis.py
+```
+
+#### Web Scraping Workflow (`web_scraping.py`)
+- Uses **requests** + **BeautifulSoup** to grab quotes from https://quotes.toscrape.com
+- Demonstrates respectful scraping (custom user-agent + delays)
+- Falls back to embedded HTML when offline
+- Saves structured output to `quotes.json` for later analysis
+
+Run it:
+```bash
+python web_scraping.py
+```
+
+#### Automation CLI (`automation_scripts.py`)
+- Builds a multi-command CLI with **argparse**
+- `backup`: create timestamped zip archives of the repo
+- `report`: compute LOC stats for every Python file and write `reports/repo_report.json`
+- `reminder`: format reminder text you can hook into cron/notifications
+- `clean`: keep your backup folder tidy by pruning old archives
+
+Examples:
+```bash
+python automation_scripts.py backup
+python automation_scripts.py report
+python automation_scripts.py reminder "Stand-up meeting" --minutes 30
+```
+
+#### Unit Tests (`tests/test_functions.py`)
+- Covers functions in `functions.py` with Python's built-in `unittest`
+- Teaches test assertions and running test suites from the CLI
+
+Run the suite:
+```bash
+python -m unittest discover -s tests
+```
+
 ## Learning Python
 
 ### Why Python?
@@ -127,14 +174,23 @@ if __name__ == "__main__":
 ## Repository Structure
 ```
 python-learning/
-├── README.md          # This file
-├── hello.py           # Basic "Hello World" example
-├── variables.py       # Variables and data types
-├── functions.py       # Function examples
-├── lists_loops.py     # Lists and looping
-├── file_operations.py # File reading/writing
-├── api_example.py     # API requests example
-└── requirements.txt   # Python dependencies
+├── README.md             # This file
+├── requirements.txt      # Python dependencies
+├── hello.py              # Basic "Hello World" example
+├── variables.py          # Variables and data types
+├── functions.py          # Function examples (+ unit tests in tests/)
+├── lists_loops.py        # Lists, loops, comprehensions
+├── file_operations.py    # File reading/writing helpers
+├── api_example.py        # REST API examples with requests
+├── data_analysis.py      # Pandas-based analytics workflow
+├── web_scraping.py       # BeautifulSoup scraping tutorial
+├── automation_scripts.py # CLI for backups/reports/reminders
+├── data/
+│   └── sales_data.csv    # Sample dataset for analytics
+├── reports/              # Auto-generated Excel/JSON reports
+├── backups/              # Zip archives created by automation script
+└── tests/
+    └── test_functions.py # unittest suite
 ```
 
 ## How to Run Examples
