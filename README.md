@@ -202,6 +202,60 @@ python type_hints_examples.py
 python -m mypy type_hints_examples.py  # optional static check
 ```
 
+#### Web Framework Examples (`web_framework_examples.py`)
+- Complete Flask web application with templates, authentication, and REST API
+- FastAPI async framework with automatic OpenAPI documentation
+- SQLAlchemy database integration with SQLite
+- Full CRUD operations with user authentication
+- Docker Compose deployment configuration
+
+Run it:
+```bash
+pip install -r requirements-web.txt
+# Flask: export FLASK_APP=web_framework_examples && flask run
+# FastAPI: uvicorn web_framework_examples:fastapi_app --reload
+```
+
+#### Database Operations (`database_examples.py`)
+- SQLite CRUD operations with connection management
+- SQLAlchemy ORM with models, relationships, and transactions
+- Connection pooling and environment-based configuration
+- Database migration basics with Alembic patterns
+- Performance optimization and query examples
+
+Run it:
+```bash
+python database_examples.py
+```
+
+#### Advanced Testing (`advanced_testing.py`)
+- Pytest fixtures and parameterization
+- Mocking and patching external dependencies
+- Async testing with asyncio
+- Property-based testing with Hypothesis
+- Integration and end-to-end test patterns
+- Test coverage reporting and CI/CD integration
+
+Run it:
+```bash
+python -m pytest advanced_testing.py -v
+```
+
+#### Data Visualization (`data_visualization.py`)
+- Matplotlib for publication-quality static plots
+- Seaborn for statistical visualizations
+- Plotly for interactive HTML charts and dashboards
+- Multi-panel dashboard layouts with subplots
+- Correlation heatmaps, scatter plots, histograms
+- Time series animations and interactive filtering
+- Export to PNG, PDF, and HTML formats
+
+Run it:
+```bash
+pip install -r requirements-visualization.txt
+python data_visualization.py
+```
+
 ## Learning Python
 
 ### Why Python?
@@ -226,25 +280,29 @@ python -m mypy type_hints_examples.py  # optional static check
 ## Repository Structure
 ```
 python-learning/
-├── README.md             # This file
-├── requirements.txt      # Python dependencies
-├── hello.py              # Basic "Hello World" example
-├── variables.py          # Variables and data types
-├── functions.py          # Function examples (+ unit tests in tests/)
-├── lists_loops.py        # Lists, loops, comprehensions
-├── file_operations.py    # File reading/writing helpers
-├── api_example.py        # REST API examples with requests
-├── data_analysis.py      # Pandas-based analytics workflow
-├── web_scraping.py       # BeautifulSoup scraping tutorial
-├── automation_scripts.py # CLI for backups/reports/reminders
-├── async_examples.py     # Async/await playground
-├── type_hints_examples.py # Static typing best practices
+├── README.md                     # This file
+├── requirements.txt              # Python dependencies
+├── hello.py                      # Basic "Hello World" example
+├── variables.py                  # Variables and data types
+├── functions.py                  # Function examples (+ unit tests in tests/)
+├── lists_loops.py                # Lists, loops, comprehensions
+├── file_operations.py            # File reading/writing helpers
+├── api_example.py                # REST API examples with requests
+├── data_analysis.py              # Pandas-based analytics workflow
+├── web_scraping.py               # BeautifulSoup scraping tutorial
+├── automation_scripts.py          # CLI for backups/reports/reminders
+├── async_examples.py             # Async/await playground
+├── type_hints_examples.py        # Static typing best practices
+├── web_framework_examples.py     # Flask & FastAPI web development
+├── database_examples.py          # SQLite & SQLAlchemy database operations
+├── advanced_testing.py           # Pytest, mocking, property-based testing
+├── data_visualization.py         # Matplotlib, Seaborn, Plotly visualizations
 ├── data/
-│   └── sales_data.csv    # Sample dataset for analytics
-├── reports/              # Auto-generated Excel/JSON reports
-├── backups/              # Zip archives created by automation script
+│   └── sales_data.csv            # Sample dataset for analytics
+├── reports/                      # Auto-generated Excel/JSON reports
+├── backups/                     # Zip archives created by automation script
 └── tests/
-    └── test_functions.py # unittest suite
+    └── test_functions.py         # unittest suite
 ```
 
 ## How to Run Examples
@@ -261,9 +319,18 @@ python-learning/
 
 ## Dependencies
 
-Install required packages:
+Install all required packages:
 ```bash
 pip install -r requirements.txt
+```
+
+Additional dependencies for specific modules:
+```bash
+# Web frameworks
+pip install -r requirements-web.txt
+
+# Data visualization
+pip install -r requirements-visualization.txt
 ```
 
 ## Contributing
