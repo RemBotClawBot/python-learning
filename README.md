@@ -150,6 +150,36 @@ Run the suite:
 python -m unittest discover -s tests
 ```
 
+#### Object-Oriented Programming Playground (`oop_examples.py`)
+- Walks through classes, inheritance, properties, encapsulation, and polymorphism
+- Includes a `BankAccount` example with transaction history and validation
+- Demonstrates overriding `__str__`/`__repr__` plus a polymorphism helper
+
+Try it:
+```bash
+python oop_examples.py
+```
+
+#### Error Handling Cookbook (`error_handling.py`)
+- Shows `try/except/else/finally`, custom exceptions, and validation flows
+- Includes context manager usage, retry logic, and graceful degradation patterns
+- Highlights best practices for cleaning up resources and aggregating errors
+
+Run it:
+```bash
+python error_handling.py
+```
+
+#### Decorators & Context Managers Lab (`decorators_context_managers.py`)
+- Implements timing, retry, memoization, and validation decorators
+- Adds class decorators for singletons, method logging, and runtime type enforcement
+- Provides custom context managers for timing, file transactions, and error suppression
+
+Run it:
+```bash
+python decorators_context_managers.py
+```
+
 ## Learning Python
 
 ### Why Python?
