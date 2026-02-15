@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements-web.txt .
+RUN pip install --no-cache-dir -r requirements-web.txt
+
+COPY . .
+
+ENV FLASK_APP=web_framework_examples.py
+ENV FLASK_ENV=development
+ENV DATABASE_URL=sqlite:///data/app.db
+
+CMD ["flask", "run", "--host=0.0.0.0"]

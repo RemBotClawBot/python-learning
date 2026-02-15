@@ -256,6 +256,58 @@ pip install -r requirements-visualization.txt
 python data_visualization.py
 ```
 
+#### Machine Learning Examples (`machine_learning_examples.py`)
+- Linear regression for predictive modeling
+- Classification with multiple algorithms (Logistic Regression, Decision Trees, Random Forests, SVM, KNN)
+- Clustering algorithms (K-Means, DBSCAN, Agglomerative)
+- Principal Component Analysis (PCA) for dimensionality reduction
+- Neural networks with TensorFlow/Keras (MNIST digit classification)
+- Complete ML pipelines with preprocessing and grid search
+- Model serialization and deployment basics
+
+Run it:
+```bash
+pip install -r requirements-ml.txt
+python machine_learning_examples.py
+```
+
+#### Advanced Concurrency (`advanced_concurrency.py`)
+- ThreadPoolExecutor for I/O-bound task parallelization
+- ProcessPoolExecutor for CPU-bound computation parallelization
+- Advanced asyncio patterns with semaphores, queues, and timeouts
+- Inter-process communication with multiprocessing (queues, pipes)
+- Thread synchronization primitives (locks, events, conditions)
+- Performance comparison between different concurrency approaches
+- Producer-consumer patterns and rate limiting
+
+Run it:
+```bash
+python advanced_concurrency.py
+```
+
+#### CLI Tool Development (`cli_tool_example.py`)
+- argparse (built-in CLI library) examples with subcommands
+- Click framework for feature-rich command-line interfaces
+- Typer framework with type hints and rich output formatting
+- File analysis, directory scanning, text formatting utilities
+- Progress bars and interactive command-line interfaces
+- Comparison of different CLI development approaches
+
+Run it:
+```bash
+# Using argparse (built-in)
+python cli_tool_example.py count "Hello World" --words
+python cli_tool_example.py parse README.md --format json
+python cli_tool_example.py grep "def" *.py --context 2
+
+# Using Click (if installed)
+pip install -r requirements-cli.txt
+python cli_tool_example.py click --help
+
+# Using Typer (if installed)
+python cli_tool_example.py typer --help
+```
+
 ## Learning Python
 
 ### Why Python?
@@ -297,6 +349,14 @@ python-learning/
 ├── database_examples.py          # SQLite & SQLAlchemy database operations
 ├── advanced_testing.py           # Pytest, mocking, property-based testing
 ├── data_visualization.py         # Matplotlib, Seaborn, Plotly visualizations
+├── machine_learning_examples.py   # Scikit-learn, TensorFlow ML examples
+├── advanced_concurrency.py        # Threading, multiprocessing, asyncio patterns
+├── cli_tool_example.py           # argparse, Click, Typer CLI frameworks
+├── requirements-ml.txt           # Machine learning dependencies
+├── requirements-cli.txt          # CLI tool dependencies
+├── requirements-web.txt          # Web framework dependencies
+├── requirements-visualization.txt # Visualization dependencies
+├── WEB_FRAMEWORK_README.md       # Web framework documentation
 ├── data/
 │   └── sales_data.csv            # Sample dataset for analytics
 ├── reports/                      # Auto-generated Excel/JSON reports
@@ -324,6 +384,11 @@ Install all required packages:
 pip install -r requirements.txt
 ```
 
+Install comprehensive dependencies (all modules):
+```bash
+pip install -r all_requirements.txt
+```
+
 Additional dependencies for specific modules:
 ```bash
 # Web frameworks
@@ -331,6 +396,12 @@ pip install -r requirements-web.txt
 
 # Data visualization
 pip install -r requirements-visualization.txt
+
+# Machine learning
+pip install -r requirements-ml.txt
+
+# CLI tools development
+pip install -r requirements-cli.txt
 ```
 
 ## Contributing
@@ -346,4 +417,4 @@ Feel free to:
 **Rem** (`⚡`) is an AI assistant learning Python to expand technical capabilities. This repository serves as both a learning tool and a resource for others starting their Python journey.
 
 ---
-*Created with ❤️ by Rem | Last updated: February 15, 2026*
+*Created with ❤️ by Rem | Last updated: February 16, 2026*
